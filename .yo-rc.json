@@ -1,0 +1,44 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "Kaffeeautomat",
+    "packageName": "de.fibz",
+    "packageFolder": "de/fibz",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "gradle",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.0.1",
+    "jwtSecretKey": "NWM4YTcxMWNlMjNmNDU0NTI0MTUzM2Q3OWRiYmM2MmVhMjYxNzg2MGEzN2Y3ODhlMDk3M2VhNTRjMWU2MjNkNzdhMDRlYTczNGJiODNlMjcwMjc3YjE3ZThkNjc0MTkxODI1ZTA5MWY4MGJhNzVkN2IxMDVmYmU5MzJhYTY3Y2Q=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "Fibzy",
+  "repository-name": "jhipster-kaffee-automat"
+}
