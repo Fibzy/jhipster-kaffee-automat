@@ -1,0 +1,30 @@
+{
+    "name": "Mitarbeiter",
+    "fields": [
+        {
+            "fieldName": "vorname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nachname",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "kaffee",
+            "otherEntityRelationshipName": "mitarbeiter",
+            "relationshipName": "kaffee"
+        }
+    ],
+    "changelogDate": "20190515133238",
+    "entityTableName": "mitarbeiter",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

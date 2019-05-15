@@ -1,0 +1,31 @@
+{
+    "name": "Kaffee",
+    "fields": [
+        {
+            "fieldName": "art",
+            "fieldType": "KaffeeArt",
+            "fieldValues": "SCHWARZ,MILCH,VANILLE,ESPRESSO,KAKAO"
+        },
+        {
+            "fieldName": "brewTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "mitarbeiter",
+            "otherEntityName": "mitarbeiter",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190515133239",
+    "entityTableName": "kaffee",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

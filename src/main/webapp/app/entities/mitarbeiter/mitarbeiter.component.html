@@ -1,0 +1,56 @@
+<div>
+    <h2 id="page-heading">
+        <span>Mitarbeiters</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-mitarbeiter" [routerLink]="['/mitarbeiter/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new Mitarbeiter
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mitarbeiters">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Vorname</span></th>
+            <th><span>Nachname</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mitarbeiter of mitarbeiters ;trackBy: trackId">
+                <td><a [routerLink]="['/mitarbeiter', mitarbeiter.id, 'view' ]">{{mitarbeiter.id}}</a></td>
+                <td>{{mitarbeiter.vorname}}</td>
+                <td>{{mitarbeiter.nachname}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/mitarbeiter', mitarbeiter.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/mitarbeiter', mitarbeiter.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'mitarbeiter', { outlets: { popup: mitarbeiter.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
