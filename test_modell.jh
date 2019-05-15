@@ -1,0 +1,20 @@
+
+entity Kaffee {
+	art KaffeeArt,
+	brewedBy Mitarbeiter,
+	brewTime Instant
+}
+
+entity Mitarbeiter {
+	vorname String,
+    nachname String
+}
+
+enum KaffeeArt {
+    SCHWARZ, MILCH, VANILLE, ESPRESSO, KAKAO
+}
+
+relationship OneToMany {
+ Mitarbeiter{kaffee} to Kaffee
+}
+
